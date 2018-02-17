@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Timeline scribble</title>
+    <link rel="stylesheet" href="./css/reset.min.css">
+    <style>
+        /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+        /* Variables */
+        /* Fonts */
+        @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,700);
+
+        .timeline-title {
+            font-family: Georgia, Times, "Times New Roman", serif;
+            text-align: center;
+            margin: 32px 0 0 0;
+            font-size: xx-large;
+        }
+
+        .timeline-subtitle {
+            text-align: center;
+            color: gray;
+            font-size: small;
+        }
+
+        .timeline-event-detail {
+            font-size: small;
+        }
+
+        body {
+            font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 1em;
+            font-weight: 300;
+            line-height: 1.5;
+            letter-spacing: 0.05em;
+        }
+
+        /* Layout */
+        * {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        /* Styling */
+        .timeline {
+            margin: 4em auto;
+            position: relative;
+            max-width: 46em;
+        }
+
+        .timeline:before {
+            background-color: black;
+            content: '';
+            margin-left: -1px;
+            position: absolute;
+            top: 0;
+            left: 2em;
+            width: 2px;
+            height: 100%;
+        }
+
+        .timeline-event {
+            position: relative;
+        }
+
+        .timeline-event:hover .timeline-event-icon {
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            background-color: #a83279;
+        }
+
+        .timeline-event:hover .timeline-event-thumbnail {
+            -moz-box-shadow: inset 40em 0 0 0 #a83279;
+            -webkit-box-shadow: inset 40em 0 0 0 #a83279;
+            box-shadow: inset 40em 0 0 0 #a83279;
+        }
+
+        .timeline-event-year {
+            padding: 2em;
+            position: relative;
+            top: -1.875em;
+            left: 4em;
+            width: 80%;
+        }
+
+        .timeline-event-year h3 {
+            font-size: 1.75em;
+        }
+
+        .timeline-event-year h4 {
+            font-size: 1.2em;
+            margin-bottom: 1.2em;
+        }
+
+        .timeline-event-year strong {
+            font-weight: 700;
+        }
+
+        .timeline-event-year p:not(.timeline-event-thumbnail) {
+            padding-bottom: 1.2em;
+        }
+
+        .timeline-event-icon {
+            -moz-transition: -moz-transform 0.2s ease-in;
+            -o-transition: -o-transform 0.2s ease-in;
+            -webkit-transition: -webkit-transform 0.2s ease-in;
+            transition: transform 0.2s ease-in;
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            background-color: black;
+            outline: 10px solid white;
+            display: block;
+            margin: 0.5em 0.5em 0.5em -0.5em;
+            position: absolute;
+            top: 0;
+            left: 2em;
+            width: 1em;
+            height: 1em;
+        }
+
+        .timeline-event-thumbnail {
+            -moz-transition: box-shadow 0.5s ease-in 0.1s;
+            -o-transition: box-shadow 0.5s ease-in 0.1s;
+            -webkit-transition: box-shadow 0.5s ease-in;
+            -webkit-transition-delay: 0.1s;
+            transition: box-shadow 0.5s ease-in 0.1s;
+            color: white;
+            font-size: 0.75em;
+            background-color: black;
+            -moz-box-shadow: inset 0 0 0 0em #ef795a;
+            -webkit-box-shadow: inset 0 0 0 0em #ef795a;
+            box-shadow: inset 0 0 0 0em #ef795a;
+            display: inline-block;
+            margin-bottom: 1.2em;
+            padding: 0.25em 1em 0.2em 1em;
+        }
+
+    </style>
+    <script src="./css/prefixfree.min.js"></script>
+</head>
+
+<body>
+<h1 class="timeline-title">
+    <strong>Net's Watch</strong>
+</h1>
+<h5 class="timeline-subtitle">Net gathers, and now my watch begins. </h5>
+<ul class="timeline">
+    <li class="timeline-event">
+        <label class="timeline-event-icon"></label>
+        <div class="timeline-event-year">
+            <a name="2018" href="#2018">
+                <p class="timeline-event-thumbnail">2018</p>
+            </a>
+            <div>
+            </div>
+        </div>
+        <div class="timeline-event-year">
+            <a name="2017" href="#2017">
+                <p class="timeline-event-thumbnail">2017</p>
+            </a>
+            <div>
+                <strong>红黄蓝幼儿园虐童事件</strong><br>
+                <ul class="timeline-event-detail">
+                    <li>
+                        11月22日，北京市朝阳区管庄红黄蓝幼儿园（新天地分园）被曝出疑似虐待儿童事件。家长反映孩子被老师用针扎、喂成分不明的白色药片，并提供了孩子身上多个针眼的照片。多名家长怀疑怀疑孩子曾被猥亵。互联网上还出现许多传言，短时间内形成舆论热点，引发网民关注和愤慨。
+                    </li>
+                    <li>11月25日，朝阳警方通报：涉事幼儿园教师刘某某（女，22岁，河北省人）因涉嫌虐待被看护人罪已被依法刑事拘留
+                        。刘某（女，31岁，北京人）编造“老虎团”人员集体猥亵幼儿虚假信息，后通过微信群传播，因虚构事实扰乱公共秩序，已被公安机关依法行政拘留。
+                    </li>
+                    <li>
+                        11月27日，朝阳警方再次通报：刘某某因部分儿童不按时睡觉，遂采用缝衣针扎的方式进行"管教"。因涉嫌虐待被看护人罪，现刘某某已被刑事拘留。经调取涉事班级监控视频存储硬盘，发现已有损坏。经专业公司技术检测，系多次强制断电所致。经查，该园库管员赵某某（女，45岁，河南省人，住在监控室）感觉监控设备噪音大，经常放学后将设备强制断电。经鉴定部门工作，目前已恢复约113小时视频，未发现有人对儿童实施侵害。
+                    </li>
+                    <li>
+                        11月29日，朝阳区纪委、区监委对朝阳区教委主任肖汶、副主任付琳（因存在对民办教育机构监管缺失问题）、朝阳区教委社会力量办学管理科科长韩斌（因工作中存在失察失责、履职不到位问题）予以立案调查。
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="timeline-event-year">
+            <a name="2015" href="#2015">
+                <p class="timeline-event-thumbnail">2015</p>
+            </a>
+            <div>
+                <strong>东方之星号客轮翻沉</strong><br>
+                <ul class="timeline-event-detail">
+                    <li>
+                        6月1日晚9时30分左右，一艘名为东方之星号的客轮在行至湖北监利县境内的长江大马洲水道遭遇暴风雨天气发生翻沉，船上人员全部落水。东方之星号共载有454人，其中旅客405人，船员46人，导游5人，最大83岁，最小3岁，以六七十岁的老年乘客居多。最终生还者仅12人 。
+                    </li>
+                    <li>
+                        中共中宣部发出通知，要求各省市区媒体不得派记者到现场采访，已经到现场采访的记者一律召回。媒体用新华社通稿，电视台用中国中央电视台新闻画面。与中国内地媒体采访受限不同，其它国家的媒体则享有集体采访的权利。
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </li>
+</ul>
+
+
+</body>
+</html>
